@@ -427,8 +427,8 @@ class UI extends Sprite {
 	}
 
 	private function play(_) {
-		stop(null);
-		spiro.draw(animDuration, tweenMode);
+		Actuate.reset();
+		Actuate.timer(0.001).onComplete(() -> spiro.draw(animDuration, tweenMode)); // skip a frame
 	}
 
 	private function save(_) {
