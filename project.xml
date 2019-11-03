@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="Spiro" package="com.sample.spiro" version="1.0.0" company="Milton Candelero" />
+	<app main="Main" path="Export" file="Spiro" />
+	
+	<source path="Source" />
+	
+	<window background="#000000" />
+	<icon path="icon.png" />
+
+	<haxelib name="openfl" />
+	<haxelib name="Actuate" />
+	<haxelib name="openfl-gif" />
+	<haxelib name="feathersui" />
+
+	<assets path="Assets" rename="" />
+
+	<!-- optimize output. Let's try to make this work. -->
+	<haxeflag name="--macro keep('openfl.display.Sprite')" /> <!-- This used to be needed for DCE full not dying. I don't think it's needed anymore, but for 2.0 is staying. It doesn't hurt anyone. -->
+	<haxeflag name="-dce full" />
+	
+	<window allow-high-dpi="true" /> <!-- needs to be true for hdpi -->
+
+	<!-- It seems that this is not automatically done by haxe... -->
+	<haxedef name="analyzer-optimize" />
+
+	<haxeflag name="--no-traces" unless="debug" /> <!-- No traces flag!-->
+	
+</project>
