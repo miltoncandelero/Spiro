@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 	
-	<meta title="Spiro" package="com.sample.spiro" version="1.0.0" company="Milton Candelero" />
+	<meta title="Spiro" package="com.sample.spiro" version="1.1.0" company="Milton Candelero" />
 	<app main="Main" path="Export" file="Spiro" />
 	
 	<source path="Source" />

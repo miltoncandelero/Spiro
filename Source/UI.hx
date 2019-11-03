@@ -427,6 +427,7 @@ class UI extends Sprite {
 	}
 
 	private function play(_) {
+		stop(null);
 		spiro.draw(animDuration, tweenMode);
 	}
 
